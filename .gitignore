@@ -1,0 +1,18 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpeta de Claude Code
+.claude/
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Logs
+*.log
+
+# Archivos de configuración local (si los hubiera)
+.env
+.env.local

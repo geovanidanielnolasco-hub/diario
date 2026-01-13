@@ -1,0 +1,731 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-light: #ffd6e8;
+    --pink-medium: #ffb3d9;
+    --pink-dark: #ff8cc6;
+    --cream: #fff8f0;
+    --peach: #ffebe7;
+    --lavender: #e8d5ff;
+    --mint: #d5f4e6;
+    --gold: #f4d58d;
+    --shadow: rgba(255, 182, 217, 0.3);
+    --text-dark: #5a4a5a;
+    --sidebar-width: 280px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--peach) 50%, var(--pink-light) 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* ========== PORTADA ========== */
+.cover-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-page::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--pink-medium) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.cover-page::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--lavender) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+    opacity: 0.3;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.cover-content {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px var(--shadow);
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.hearts-decoration {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.hearts-decoration.bottom {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.heart {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.heart:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.heart:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.cover-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    color: var(--pink-dark);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.cover-subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.cover-date {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.open-book-btn {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.open-book-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+/* ========== LIBRO PRINCIPAL ========== */
+.book-container {
+    display: flex;
+    min-height: 100vh;
+    animation: fadeIn 0.5s ease-out;
+    position: relative;
+}
+
+/* ========== SIDEBAR CALENDARIO ========== */
+.calendar-sidebar {
+    width: var(--sidebar-width);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 0 20px var(--shadow);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.calendar-sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sidebar-header h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+}
+
+.toggle-sidebar {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.toggle-sidebar:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.calendar-sidebar.hidden .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.total-days {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--pink-dark);
+    background: var(--peach);
+    font-size: 1.1rem;
+}
+
+.calendar-grid {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.calendar-day {
+    background: white;
+    border: 2px solid var(--pink-light);
+    border-radius: 15px;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.calendar-day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow);
+    border-color: var(--pink-medium);
+    background: var(--cream);
+}
+
+.calendar-day.active {
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    border-color: var(--pink-dark);
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.cal-day-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Pacifico', cursive;
+}
+
+.cal-day-date {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* ========== CONTENIDO PRINCIPAL ========== */
+.book-main {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.calendar-sidebar.hidden ~ .book-main {
+    margin-left: 0;
+}
+
+.book-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn, .menu-btn {
+    font-family: 'Quicksand', sans-serif;
+    background: var(--lavender);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover, .menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.menu-btn {
+    background: var(--pink-light);
+}
+
+.book-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--pink-dark);
+}
+
+/* ========== NAVEGACIÓN ========== */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.nav-btn {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.nav-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.current-day-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.day-badge {
+    background: linear-gradient(135deg, var(--gold), #ffd98e);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(244, 213, 141, 0.4);
+}
+
+.days-total {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.7;
+}
+
+/* ========== PÁGINA DEL DÍA ========== */
+.page-container {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-page {
+    width: 100%;
+    max-width: 900px;
+    animation: pageSlideIn 0.5s ease-out;
+}
+
+.day-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px var(--shadow);
+    position: relative;
+}
+
+.day-badge-large {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 30px var(--shadow);
+    z-index: 10;
+}
+
+.day-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.day-number-large {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Pacifico', cursive;
+}
+
+.page-inner {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.polaroid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.polaroid {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    transform: rotate(-2deg);
+    transition: all 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid-inner {
+    background: white;
+    padding: 15px;
+    padding-bottom: 60px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--cream);
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.day-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--cream), var(--peach));
+    font-size: 3rem;
+}
+
+.photo-placeholder p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-top: 0.5rem;
+}
+
+.polaroid-caption {
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Sacramento', cursive;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.tape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tape-1 {
+    width: 80px;
+    height: 25px;
+    top: -10px;
+    left: 20px;
+    transform: rotate(-15deg);
+}
+
+.tape-2 {
+    width: 80px;
+    height: 25px;
+    top: -10px;
+    right: 20px;
+    transform: rotate(15deg);
+}
+
+.diary-section {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--pink-medium);
+}
+
+.diary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--pink-light);
+}
+
+.diary-date {
+    font-weight: 600;
+    color: var(--pink-dark);
+    font-size: 1.1rem;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.diary-text {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    white-space: pre-line;
+}
+
+.page-decoration {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    transform: rotate(15deg);
+    opacity: 0.8;
+    animation: wiggle 3s ease-in-out infinite;
+}
+
+.sticker:nth-child(1)::before { content: '✨'; }
+
+/* ========== NAVEGACIÓN INFERIOR (MÓVIL) ========== */
+.bottom-navigation {
+    display: none;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -2px 10px var(--shadow);
+    position: sticky;
+    bottom: 0;
+    gap: 0.5rem;
+}
+
+.bottom-nav-btn {
+    flex: 1;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, var(--pink-medium), var(--pink-dark));
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.bottom-nav-btn.calendar-mobile {
+    flex: 0 0 60px;
+    font-size: 1.5rem;
+}
+
+.bottom-nav-btn:disabled {
+    opacity: 0.4;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(15deg); }
+    25% { transform: rotate(20deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+    .calendar-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .calendar-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .book-main {
+        margin-left: 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+    }
+
+    .cover-title {
+        font-size: 3rem;
+    }
+
+    .book-title {
+        font-size: 1.3rem;
+    }
+
+    .book-header {
+        padding: 1rem;
+    }
+
+    .page-navigation {
+        display: none;
+    }
+
+    .bottom-navigation {
+        display: flex;
+    }
+
+    .day-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .page-container {
+        padding: 1rem;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-label {
+        display: none;
+    }
+
+    .calendar-sidebar {
+        width: 100%;
+    }
+
+    .menu-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}

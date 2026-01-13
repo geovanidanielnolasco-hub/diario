@@ -1,0 +1,281 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║          💕 LIBRO DE AMOR - INSTRUCCIONES 💕              ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+¡Bienvenido a tu diario de amor interactivo!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 CÓMO USAR:
+
+1. Abre el archivo "index.html" en tu navegador web
+   (Doble click en el archivo o arrastra a Chrome/Firefox/Safari)
+
+2. Verás una portada hermosa - Click en "Abrir nuestro libro"
+
+3. ¡Disfruta de tu diario de amor página por página!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧭 NAVEGACIÓN:
+
+El libro ahora tiene un sistema de navegación mejorado:
+
+• CALENDARIO LATERAL:
+  - A la izquierda verás un calendario con todos tus días
+  - Click en cualquier día para ir directo a esa página
+  - El día actual está resaltado en rosa
+  - Puedes ocultar/mostrar el calendario con el botón ◀
+
+• BOTONES DE NAVEGACIÓN:
+  - "← Anterior" y "Siguiente →" para pasar páginas
+  - En móvil, los botones están abajo de la pantalla
+
+• ATAJOS DE TECLADO:
+  - Flecha izquierda (←) = Día anterior
+  - Flecha derecha (→) = Día siguiente
+  - Tecla "C" = Mostrar/Ocultar calendario
+  - Tecla "Escape" = Volver a la portada
+
+• EN MÓVIL:
+  - Desliza el dedo hacia la izquierda para siguiente día
+  - Desliza el dedo hacia la derecha para día anterior
+  - Botón "📅" para abrir el calendario
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✏️  CÓMO AGREGAR NUEVOS DÍAS:
+
+1. Abre el archivo "datos.js" con cualquier editor de texto
+   (Bloc de notas, TextEdit, Notepad++, VS Code, etc.)
+
+2. Busca la sección "AGREGAR MÁS DÍAS AQUÍ"
+
+3. Copia y pega este formato:
+
+   {
+       day: 4,
+       date: '2025-01-12',
+       caption: 'Un día especial',
+       text: `Hoy fue un día increíble porque...
+
+       Puedes escribir todo lo que quieras aquí.
+       Usa varias líneas si quieres.`,
+       photo: 'dia4.jpg'
+   },
+
+4. Cambia:
+   - day: el número del día
+   - date: la fecha (formato: 'YYYY-MM-DD')
+   - caption: texto corto para el polaroid
+   - text: tu historia del día
+   - photo: nombre de tu archivo de foto
+
+5. ⚠️ IMPORTANTE: Pon una coma (,) después de cada entrada
+   excepto en la última
+
+6. Guarda el archivo y recarga la página en el navegador
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📸 CÓMO AGREGAR FOTOS (¡SÚPER FÁCIL!):
+
+**PASO 1: Coloca tus fotos en la carpeta "images/"**
+
+1. Abre la carpeta "images" que está junto a index.html
+2. Copia TODAS tus fotos ahí
+3. ¡NO necesitas renombrarlas! Usa sus nombres originales
+
+**PASO 2: Agrega las fotos al glosario**
+
+1. Abre el archivo "datos.js"
+2. Al principio verás el "GLOSARIO DE FOTOS"
+3. Agrega tus fotos así:
+
+   const fotosGlosario = {
+       foto1: 'images/IMG_20250109.jpg',      ← Tu foto real
+       foto2: 'images/mi-foto-linda.png',     ← Cualquier nombre
+       foto3: 'images/Screenshot_001.jpg',    ← Nombre original
+       foto4: 'images/recuerdo-especial.png',
+       // Agrega más...
+   };
+
+**PASO 3: Usa las fotos en tus días**
+
+En tus entradas del diario, solo pon:
+
+   {
+       day: 1,
+       date: '2025-01-09',
+       caption: 'Mi primer día',
+       text: `Texto aquí...`,
+       photo: 'foto1'   ← ¡Así de fácil!
+   }
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 VENTAJAS DEL GLOSARIO:
+
+✓ NO necesitas renombrar tus fotos
+✓ Usa los nombres originales (IMG_1234.jpg, Screenshot.png, etc.)
+✓ Defines cada foto UNA SOLA VEZ
+✓ Más fácil y organizado
+✓ Si cambias una foto, solo editas el glosario
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 EJEMPLO COMPLETO:
+
+// En datos.js - Glosario de fotos:
+const fotosGlosario = {
+    foto1: 'images/IMG_20250109_143522.jpg',
+    foto2: 'images/nuestra-primera-cita.png',
+    foto3: 'images/Screenshot_2025-01-11.jpg',
+};
+
+// En datos.js - Entrada del diario:
+{
+    day: 1,
+    date: '2025-01-09',
+    caption: 'Primer día juntos',
+    text: `Hoy fue increíble...`,
+    photo: 'foto1'  ← Usa el nombre del glosario
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 ¡NUEVO! OPCIONES DE MULTIMEDIA:
+
+Ahora puedes usar:
+
+✓ Fotos locales (.jpg, .png, .gif, .webp)
+✓ URLs de imágenes de internet (Imgur, Google Photos, etc.)
+✓ Videos de YouTube
+✓ Sin foto (placeholder con corazón)
+
+Ejemplos:
+┌───────────────────────────────────────────────────┐
+│ foto1: 'images/mi-foto.jpg',           // Local  │
+│ foto2: 'https://i.imgur.com/abc.jpg',  // URL    │
+│ foto3: 'https://youtube.com/watch...',  // Video │
+│ photo: null                             // Sin   │
+└───────────────────────────────────────────────────┘
+
+Ver detalles en: OPCIONES_MULTIMEDIA.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 CARACTERÍSTICAS:
+
+✨ Diseño aesthetic estilo Pinterest
+💕 Polaroids que se balancean al pasar el mouse
+📱 Responsive - se ve bien en teléfono y computadora
+📅 Calendario lateral para acceso rápido a cualquier día
+⌨️  Atajos de teclado para navegación rápida
+👆 Soporte de gestos táctiles (swipe) en móvil
+🎭 Animaciones suaves y románticas
+🌸 Stickers decorativos diferentes para cada día
+🎀 Colores pastel super lindos
+🔄 Navegación página por página (¡perfecto para 100+ días!)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 ESTRUCTURA DE ARCHIVOS:
+
+Mi amor/
+│
+├── index.html          (La página principal - ABRE ESTE)
+├── styles.css          (Los estilos bonitos)
+├── script.js           (La magia que hace funcionar todo)
+├── datos.js            (TUS ENTRADAS - EDITA ESTE)
+├── INSTRUCCIONES.txt   (Este archivo)
+│
+└── images/             (Carpeta para TODAS tus fotos)
+    ├── IMG_20250109.jpg
+    ├── mi-foto-favorita.png
+    ├── Screenshot_001.jpg
+    └── ... (todas tus fotos aquí)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIPS:
+
+• Guarda copias de seguridad de tu archivo datos.js
+• Las fotos se ven mejor en orientación horizontal (landscape)
+• Puedes escribir textos largos - ¡no hay límite!
+• Usa emojis en tus textos para hacerlo más lindo 💕
+• Recarga la página (F5) después de hacer cambios
+• El calendario te permite saltar rápidamente entre días
+• Incluso con 100 días, es súper fácil encontrar uno específico
+• El día actual siempre está resaltado en el calendario
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 EJEMPLO DE MÚLTIPLES DÍAS:
+
+const diaryEntries = [
+    {
+        day: 1,
+        date: '2025-01-09',
+        caption: 'El inicio',
+        text: `Primer día juntos...`,
+        photo: 'dia1.jpg'
+    },
+    {
+        day: 2,
+        date: '2025-01-10',
+        caption: 'Segundo día',
+        text: `Hoy fue especial...`,
+        photo: 'dia2.png'
+    },
+    {
+        day: 3,
+        date: '2025-01-11',
+        caption: 'Tercer día',
+        text: `Cada día es mejor...`,
+        photo: 'dia3.jpg'
+    }
+    // ¡Puedes agregar 100+ días más!
+];
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎁 COMPARTIR:
+
+Puedes compartir tu diario de amor:
+1. Comprime toda la carpeta en un ZIP
+2. Comparte el ZIP
+3. O súbelo a un servidor web para compartir el link
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐛 SOLUCIÓN DE PROBLEMAS:
+
+• ¿No se ven las fotos?
+  - Verifica que estén en la carpeta "images/"
+  - Revisa que el glosario tenga el nombre correcto
+  - Asegúrate de usar 'images/' al principio del nombre
+  - Ejemplo correcto: foto1: 'images/mi-foto.jpg'
+
+• ¿El calendario no aparece?
+  - Presiona la tecla "C" o click en "📅 Calendario"
+  - En pantallas grandes, aparece automáticamente a la izquierda
+
+• ¿No se actualiza después de agregar días?
+  - Presiona Ctrl+F5 (Cmd+Shift+R en Mac) para recargar forzado
+  - Verifica que el archivo datos.js esté guardado correctamente
+
+• ¿Error en la consola?
+  - Revisa que todas las entradas tengan comas (,) excepto la última
+  - Verifica que las fechas tengan formato 'YYYY-MM-DD'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❤️  ¡Disfruta creando tu historia de amor! ❤️
+
+Con el nuevo sistema de navegación, puedes tener 100, 200 o
+1000 días y siempre será fácil encontrar el que buscas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

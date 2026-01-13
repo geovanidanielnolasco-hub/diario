@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia de Amor 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Página de portada -->
+    <div class="cover-page" id="coverPage">
+        <div class="cover-content">
+            <div class="hearts-decoration">
+                <span class="heart">💕</span>
+                <span class="heart">✨</span>
+                <span class="heart">💖</span>
+            </div>
+            <h1 class="cover-title">Nuestra Historia</h1>
+            <p class="cover-subtitle">Un diario de amor</p>
+            <div class="cover-date">Comenzó el 9 de Enero, 2025</div>
+            <button class="open-book-btn" onclick="openBook()">Abrir nuestro libro 💝</button>
+            <div class="hearts-decoration bottom">
+                <span class="heart">🌸</span>
+                <span class="heart">💗</span>
+                <span class="heart">🌟</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libro principal -->
+    <div class="book-container" id="bookContainer" style="display: none;">
+        <!-- Sidebar con calendario -->
+        <aside class="calendar-sidebar" id="calendarSidebar">
+            <div class="sidebar-header">
+                <h3>Nuestros Días 💕</h3>
+                <button class="toggle-sidebar" onclick="toggleSidebar()">
+                    <span class="toggle-icon">◀</span>
+                </button>
+            </div>
+            <div class="total-days">
+                Total: <span id="totalDays">0</span> días
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Los días del calendario se cargarán aquí -->
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="book-main">
+            <!-- Header -->
+            <header class="book-header">
+                <button class="back-btn" onclick="closebook()">← Portada</button>
+                <h2 class="book-title">Nuestros Momentos Juntos</h2>
+                <button class="menu-btn" onclick="toggleSidebar()">
+                    📅 Calendario
+                </button>
+            </header>
+
+            <!-- Navegación -->
+            <div class="page-navigation">
+                <button class="nav-btn prev-btn" onclick="previousDay()" id="prevBtn">
+                    <span>←</span>
+                    <span class="nav-label">Anterior</span>
+                </button>
+
+                <div class="current-day-indicator">
+                    <span class="day-badge">Día <span id="currentDayNumber">1</span></span>
+                    <span class="days-total">de <span id="daysTotal">0</span></span>
+                </div>
+
+                <button class="nav-btn next-btn" onclick="nextDay()" id="nextBtn">
+                    <span class="nav-label">Siguiente</span>
+                    <span>→</span>
+                </button>
+            </div>
+
+            <!-- Contenedor de la página actual -->
+            <div class="page-container" id="pageContainer">
+                <!-- La página del día se cargará aquí -->
+            </div>
+
+            <!-- Navegación inferior (móvil) -->
+            <div class="bottom-navigation">
+                <button class="bottom-nav-btn" onclick="previousDay()">
+                    ← Anterior
+                </button>
+                <button class="bottom-nav-btn calendar-mobile" onclick="toggleSidebar()">
+                    📅
+                </button>
+                <button class="bottom-nav-btn" onclick="nextDay()">
+                    Siguiente →
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Template para cada día (oculto) -->
+    <template id="dayTemplate">
+        <div class="day-page">
+            <div class="day-content">
+                <div class="day-badge-large">
+                    <span class="day-label">Día</span>
+                    <span class="day-number-large"></span>
+                </div>
+
+                <div class="page-inner">
+                    <div class="polaroid-container">
+                        <div class="polaroid">
+                            <div class="polaroid-inner">
+                                <div class="photo-frame">
+                                    <img class="day-photo" src="" alt="Nuestro momento">
+                                    <div class="photo-placeholder">
+                                        <span>💕</span>
+                                        <p>Esperando foto...</p>
+                                    </div>
+                                </div>
+                                <div class="polaroid-caption"></div>
+                            </div>
+                            <div class="tape tape-1"></div>
+                            <div class="tape tape-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="diary-section">
+                        <div class="diary-header">
+                            <span class="diary-date"></span>
+                            <span class="heart-icon">💝</span>
+                        </div>
+                        <div class="diary-text"></div>
+                    </div>
+                </div>
+
+                <div class="page-decoration">
+                    <span class="sticker"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template para día en calendario -->
+    <template id="calendarDayTemplate">
+        <button class="calendar-day" onclick="goToDay(0)">
+            <span class="cal-day-num">1</span>
+            <span class="cal-day-date">1 Ene</span>
+        </button>
+    </template>
+
+    <script src="datos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

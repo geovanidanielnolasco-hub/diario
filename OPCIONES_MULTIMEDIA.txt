@@ -1,0 +1,267 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║        📸 OPCIONES DE FOTOS Y VIDEOS 🎬                   ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+¡Ahora tienes MUCHAS opciones para cada día!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 ¿QUÉ PUEDES USAR?
+
+1. 📁 Fotos locales (en carpeta images/)
+2. 🌐 URLs de imágenes de internet
+3. 🎬 Videos de YouTube
+4. 💕 Sin foto (placeholder con corazón)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 OPCIÓN 1: FOTOS LOCALES
+
+✅ Mejor para: Tus propias fotos
+
+1. Coloca la foto en carpeta "images/"
+2. En el glosario:
+   foto1: 'images/mi-foto.jpg',
+3. En tu día:
+   photo: 'foto1'
+
+Ejemplo:
+┌─────────────────────────────────────┐
+│ const fotosGlosario = {             │
+│     foto1: 'images/IMG_0001.jpg',   │
+│ };                                  │
+│                                     │
+│ { day: 1, photo: 'foto1' }          │
+└─────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 OPCIÓN 2: IMÁGENES DE INTERNET
+
+✅ Mejor para: Cuando no tienes la foto pero está en internet
+
+1. Sube tu foto a un servicio:
+   • Imgur (https://imgur.com)
+   • Dropbox
+   • Google Photos
+   • Cualquier URL pública
+
+2. Copia la URL directa de la imagen
+
+3. En el glosario:
+   foto2: 'https://i.imgur.com/abc123.jpg',
+
+4. En tu día:
+   photo: 'foto2'
+
+Ejemplo:
+┌────────────────────────────────────────────────┐
+│ const fotosGlosario = {                        │
+│     foto2: 'https://i.imgur.com/abc123.jpg',   │
+│ };                                             │
+│                                                │
+│ { day: 2, photo: 'foto2' }                     │
+└────────────────────────────────────────────────┘
+
+💡 TIP: Para Imgur, haz click derecho en la imagen
+        y selecciona "Copiar dirección de imagen"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 OPCIÓN 3: VIDEOS DE YOUTUBE
+
+✅ Mejor para: Recordar una canción, momento o video especial
+
+1. Ve al video en YouTube
+
+2. Copia la URL (cualquiera de estos formatos):
+   • https://www.youtube.com/watch?v=abc123
+   • https://youtu.be/abc123
+
+3. En el glosario:
+   foto3: 'https://www.youtube.com/watch?v=abc123',
+
+4. En tu día:
+   photo: 'foto3'
+
+Ejemplo:
+┌──────────────────────────────────────────────────────┐
+│ const fotosGlosario = {                              │
+│     foto3: 'https://www.youtube.com/watch?v=abc123', │
+│ };                                                   │
+│                                                      │
+│ { day: 3, photo: 'foto3' }                           │
+└──────────────────────────────────────────────────────┘
+
+💡 El video se reproduce directamente en tu diario
+   (No necesitas salir de la página)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💕 OPCIÓN 4: SIN FOTO (PLACEHOLDER)
+
+✅ Mejor para: Días que no se vieron o sin foto
+
+1. En tu día, usa:
+   photo: null
+
+2. Aparecerá un placeholder bonito con corazón
+
+Ejemplo:
+┌─────────────────────────────────────┐
+│ {                                   │
+│     day: 4,                         │
+│     date: '2025-01-13',             │
+│     caption: 'Te extrañé hoy',      │
+│     text: `No nos vimos pero...`,   │
+│     photo: null  ← Sin foto         │
+│ }                                   │
+└─────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 OPCIÓN 5: IMAGEN GENÉRICA
+
+✅ Mejor para: Usar la misma imagen en varios días
+
+1. Crea una entrada en el glosario:
+   fotoGenerica: 'images/corazon.png',
+
+2. Úsala en múltiples días:
+   { day: 5, photo: 'fotoGenerica' }
+   { day: 6, photo: 'fotoGenerica' }
+
+Ejemplo:
+┌─────────────────────────────────────────┐
+│ const fotosGlosario = {                 │
+│     fotoGenerica: 'images/corazon.png', │
+│     foto1: 'images/dia-especial.jpg',   │
+│ };                                      │
+│                                         │
+│ { day: 1, photo: 'foto1' }              │
+│ { day: 2, photo: 'fotoGenerica' }       │
+│ { day: 3, photo: 'fotoGenerica' }       │
+└─────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 EJEMPLO COMPLETO - COMBINANDO TODO
+
+const fotosGlosario = {
+    // Fotos locales
+    foto1: 'images/IMG_0001.jpg',
+    foto2: 'images/nuestra-cita.png',
+
+    // Imágenes de internet
+    foto3: 'https://i.imgur.com/abc123.jpg',
+
+    // Videos de YouTube
+    video1: 'https://www.youtube.com/watch?v=abc123',
+    video2: 'https://youtu.be/xyz789',
+
+    // Imagen genérica
+    fotoGenerica: 'images/corazon.png',
+};
+
+const diaryEntries = [
+    // Día 1: Foto local
+    {
+        day: 1,
+        date: '2025-01-09',
+        caption: 'Nuestro primer día',
+        text: `Hoy fue increíble...`,
+        photo: 'foto1'
+    },
+
+    // Día 2: Sin foto
+    {
+        day: 2,
+        date: '2025-01-10',
+        caption: 'No nos vimos',
+        text: `Pero pienso en ti...`,
+        photo: null
+    },
+
+    // Día 3: Video de YouTube
+    {
+        day: 3,
+        date: '2025-01-11',
+        caption: 'Nuestra canción',
+        text: `Esta canción me recuerda a ti...`,
+        photo: 'video1'
+    },
+
+    // Día 4: Imagen de internet
+    {
+        day: 4,
+        date: '2025-01-12',
+        caption: 'Foto compartida',
+        text: `Me enviaste esta foto linda...`,
+        photo: 'foto3'
+    },
+
+    // Día 5: Imagen genérica
+    {
+        day: 5,
+        date: '2025-01-13',
+        caption: 'Día tranquilo',
+        text: `Un día más juntos...`,
+        photo: 'fotoGenerica'
+    },
+];
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ PREGUNTAS FRECUENTES
+
+P: ¿Puedo mezclar todos los tipos?
+R: ¡SÍ! Usa lo que necesites para cada día
+
+P: ¿Los videos de YouTube funcionan sin internet?
+R: NO, necesitas conexión para ver videos
+
+P: ¿Las URLs de imágenes necesitan internet?
+R: SÍ, pero si guardas el proyecto completo funcionan
+
+P: ¿Qué pasa si una URL deja de funcionar?
+R: Aparecerá el placeholder con corazón
+
+P: ¿Puedo usar videos de otras plataformas?
+R: Por ahora solo YouTube
+
+P: ¿Cómo subo una foto a Imgur?
+R: 1. Ve a https://imgur.com
+   2. Arrastra tu foto
+   3. Click derecho → "Copiar dirección de imagen"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 RECOMENDACIONES
+
+✓ Fotos importantes → Guárdalas local (images/)
+✓ Videos/canciones → YouTube
+✓ Días sin foto → null (placeholder)
+✓ Fotos temporales → URLs de internet
+✓ Imagen repetida → Usa foto genérica
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 RESUMEN RÁPIDO
+
+┌──────────────────┬────────────────────────────────────┐
+│ Tipo             │ Ejemplo                            │
+├──────────────────┼────────────────────────────────────┤
+│ Foto local       │ 'images/foto.jpg'                  │
+│ URL externa      │ 'https://i.imgur.com/abc.jpg'      │
+│ Video YouTube    │ 'https://youtube.com/watch?v=abc'  │
+│ Sin foto         │ null                               │
+└──────────────────┴────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+¡Ahora tienes todas las opciones para hacer tu diario
+aún más especial! 💕
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

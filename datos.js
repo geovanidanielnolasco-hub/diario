@@ -32,12 +32,15 @@ const fotosGlosario = {
     foto1: 'images/dia2.jpeg',  // Esta era la que estaba en dia2
     foto2: 'images/dia1.jpeg',  // Esta era la que estaba en dia1
 
-    // Imagen de Coraline (la película) para el día 4
-    coraline: 'https://images.moviesanywhere.com/bd67df9b4092ba0817e4c6e9f267ed6d/cd7e37e0-af34-4c64-8a61-89318818a3c1.jpg',
+    // Imagen para el día 3
+    foto3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSgBEqKn2i6COeKNV6QUvx04MJJh1pkmavTQ&s',
+
+    // Imagen de Coraline para el día 4
+    coraline: 'https://play-lh.googleusercontent.com/1MVSxuCvyppMOAMToGiaAy_YHIzlzXe13VKpUzNAzOOY69KS8tulON2stN7_I6FczLzVeuND7PzKBlLK6Q=s1280-w1280-h720',
 
     // Agrega más fotos aquí según las necesites:
-    // foto3: 'images/dia3.jpeg',
     // foto5: 'images/dia5.jpeg',
+    // foto6: 'https://ejemplo.com/imagen.jpg',
 
     // También puedes usar videos de YouTube:
     // video1: 'https://www.youtube.com/watch?v=abc123',
@@ -94,7 +97,7 @@ En fin mi amor, este es el resumen del día. ¡Eres increíble!`,
 Gracias porque la verdad eres lo mejor del mundo y como te dije no te vas a arrepentir, yo deseo que estemos bien, cumplamos nuestros sueños, nuestras metas pero poder estar ahí para vértelas cumplir.
 
 Eres 1 en 3 billones de personas. ¡Eres única!`,
-        photo: null  // Sin foto, muestra placeholder
+        photo: 'foto3'
     },
     {
         day: 4,

@@ -68,7 +68,7 @@ const fotosGlosario = {
 const diaryEntries = [
     {
         day: 1,
-        date: '2025-01-09',
+        date: '2026-01-09',
         caption: 'El inicio de nuestra historia',
         text: `Hola mi amor, hoy comenzamos esta historia de amor. Quiero decirte que estaba muy nervioso porque no sabía qué pasaría. Si te soy sincero, me súper emocioné por este día y disfruté mucho preparar todo.
 
@@ -79,7 +79,7 @@ Eres la persona más maravillosa del mundo y deseo con todo el corazón que este
     },
     {
         day: 2,
-        date: '2025-01-10',
+        date: '2026-01-10',
         caption: 'Nuestro segundo día',
         text: `Hola amor, la verdad este día comenzó súper temprano porque nos dormimos muy temprano jaja. Mi amor, este es el día dos, cenamos y vimos una peli la neta sí bien buena, luego nos acostamos y al siguiente día agarramos camino.
 
@@ -90,7 +90,7 @@ En fin mi amor, este es el resumen del día. ¡Eres increíble!`,
     },
     {
         day: 3,
-        date: '2025-01-11',
+        date: '2026-01-11',
         caption: 'Estableciendo nuestras bases',
         text: `Hola bebé, este día fue diría interesante, pero en resumen se establecieron las reglas para que todo esto funcione. De verdad tengo muchos deseos de que seamos felices juntos, deseo y anhelo que cada día que pase estemos juntos por siempre.
 
@@ -101,7 +101,7 @@ Eres 1 en 3 billones de personas. ¡Eres única!`,
     },
     {
         day: 4,
-        date: '2025-01-12',
+        date: '2026-01-12',
         caption: 'Jugando juntos',
         text: `Amor, es 12 de enero, ya vamos por 4 días y la verdad sí pienso hacer esto diario o al menos cada tercer día para no olvidar. Es nuestro diario, en su momento lo pasaré a otro lugar más seguro pero mientras quiero que lo veamos aquí.
 
@@ -118,7 +118,7 @@ En fin amor, me voy porque hoy toca jugar Coraline.`,
     /*
     {
         day: 4,
-        date: '2025-01-12',
+        date: '2026-01-12',
         caption: 'Cuarto día mágico',
         text: `Tu texto aquí...
 

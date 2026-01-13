@@ -36,7 +36,7 @@ Edita `datos.js` y agrega nuevas entradas:
 ```javascript
 {
     day: 5,
-    date: '2025-01-13',
+    date: '2026-01-13',
     caption: 'Un día especial',
     text: `Tu historia aquí...`,
     photo: 'foto5'
@@ -55,4 +55,4 @@ Este diario fue creado para documentar nuestra historia de amor, día a día.
 
 ---
 
-*Comenzó el 9 de enero, 2025*
+*Comenzó el 9 de enero, 2026*

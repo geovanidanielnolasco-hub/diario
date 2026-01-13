@@ -28,18 +28,12 @@
 //    foto6: 'images/imagen-generica-amor.png'
 //
 const fotosGlosario = {
-    // Tus fotos reales
-    foto1: 'images/dia1.jpeg',
-    foto2: 'images/dia2.jpeg',
+    // Tus fotos reales (INVERTIDAS - ahora correctas)
+    foto1: 'images/dia2.jpeg',  // Esta era la que estaba en dia2
+    foto2: 'images/dia1.jpeg',  // Esta era la que estaba en dia1
 
-    // Imagen de Coraline para el día 4
-    // INSTRUCCIONES: Ve a Google Images, busca "Coraline game",
-    // haz click derecho en la imagen que te guste → "Copiar dirección de imagen"
-    // y pega la URL aquí. Ejemplo:
-    coraline: 'https://static.wikia.nocookie.net/coraline/images/4/44/Coraline_game_cover.jpg',
-
-    // O sube tu propia imagen de Coraline a Imgur y usa esa URL
-    // Ejemplo: 'https://i.imgur.com/tu-imagen.jpg'
+    // Imagen de Coraline (la película) para el día 4
+    coraline: 'https://images.moviesanywhere.com/bd67df9b4092ba0817e4c6e9f267ed6d/cd7e37e0-af34-4c64-8a61-89318818a3c1.jpg',
 
     // Agrega más fotos aquí según las necesites:
     // foto3: 'images/dia3.jpeg',

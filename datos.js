@@ -102,13 +102,20 @@ Eres 1 en 3 billones de personas. ¡Eres única!`,
     {
         day: 4,
         date: '2026-01-12',
-        caption: 'Jugando juntos',
-        text: `Amor, es 12 de enero, ya vamos por 4 días y la verdad sí pienso hacer esto diario o al menos cada tercer día para no olvidar. Es nuestro diario, en su momento lo pasaré a otro lugar más seguro pero mientras quiero que lo veamos aquí.
+        caption: 'Un día sin internet',
+        text: `Hola mi amor, la verdad hoy había escrito algo porque pensé que íbamos a jugar pero qué crees, estaba bien gacha tu internet y ya no jugamos, ahora se complicó y ya nos vamos a dormir.
 
-Hoy hablamos por llamada mucho y no sabes cómo amo estos momentos. Me encanta que hablemos como pequeños, me siento grande y chiquitito a la vez. De verdad que no hay nadie como tú que me haga sentirme así, me tienes loco.
-
-En fin amor, me voy porque hoy toca jugar Coraline.`,
+No olvides que eres lo más importante para mí y que estoy muy agradecido por todo lo que haces por mí.`,
         photo: 'coraline'  // Imagen de Coraline
+    },
+    {
+        day: 5,
+        date: '2026-01-13',
+        caption: 'Noticias del trabajo',
+        text: `Hola mi amor, ¿cómo estás? Hoy te fuiste muy temprano a la escuela pero me da gusto saber que te fue bien, espero que hoy sí podamos jugar.
+
+Hoy me dijeron que trabajaré hasta el 30, bueno no como tal pero sí me lo mencionaron, me puse muy nervioso pero gracias por darme palabras de ánimo, sin duda eres la mejor del mundo.`,
+        photo: null
     },
     // ========================================
     // AGREGAR MÁS DÍAS AQUÍ

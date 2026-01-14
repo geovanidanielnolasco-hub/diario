@@ -52,17 +52,19 @@ function formatDate(dateString) {
         month: 'long',
         day: 'numeric'
     };
-    const date = new Date(dateString);
+    // Parsear la fecha manualmente para evitar problemas de zona horaria
+    const [year, month, day] = dateString.split('-');
+    const date = new Date(year, month - 1, day);
     return date.toLocaleDateString('es-ES', options);
 }
 
 // Función para formatear fecha corta (para calendario)
 function formatShortDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate();
+    // Parsear la fecha manualmente para evitar problemas de zona horaria
+    const [year, month, day] = dateString.split('-');
     const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-    const month = monthNames[date.getMonth()];
-    return `${day} ${month}`;
+    const monthName = monthNames[parseInt(month) - 1];
+    return `${parseInt(day)} ${monthName}`;
 }
 
 // Función para detectar si es una URL de YouTube

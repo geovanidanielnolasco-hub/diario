@@ -117,6 +117,17 @@ No olvides que eres lo más importante para mí y que estoy muy agradecido por t
 Hoy me dijeron que trabajaré hasta el 30, bueno no como tal pero sí me lo mencionaron, me puse muy nervioso pero gracias por darme palabras de ánimo, sin duda eres la mejor del mundo.`,
         photo: null
     },
+    {
+        day: 6,
+        date: '2026-01-14',
+        caption: 'Te extraño mucho',
+        text: `Hola mi amor, hoy es un día en el que en verdad te extraño como no tienes idea, quiero correr e ir a verte pero no quiero interrumpir tus actividades pero debes saber que te extraño mucho. Hoy fue un día interesante, me confirmaron que me voy el 30, compramos la iPad en gris, yo creo que el viernes llega y estrenaremos iPad. También vendí la tablet hoy, se la llevó Toño. Hoy jugué con Cris unas partidas de ajedrez, me di el tiempo cuando comprábamos la iPad.
+
+Cierto, hoy hice mi primera tinga y el día de ayer nos desvelamos jugando un jueguito de peleas, estuvo bien divertido porque eres buena matando jaja. A cierto, olvidé lo más divertido de hoy, mi novia me marcó desde el baño reclamándome que le había llevado el gritón jaja, casi termino bloqueado y no fui yo.
+
+En fin amor, hasta aquí mi reporte del día de hoy. Besitos mi niña, gracias por permitirme estar a tu lado.`,
+        photo: null
+    },
     // ========================================
     // AGREGAR MÁS DÍAS AQUÍ
     // ========================================

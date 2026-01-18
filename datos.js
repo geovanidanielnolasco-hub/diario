@@ -146,6 +146,24 @@ Ay amor, hoy fue un día en el que no hice casi nada, me dediqué full a avanzar
 Supongo que hoy también tocará desvelarse para acabar con esas páginas, hoy hiciste 6 en la mañana. Bueno mi amor, hasta aquí mi reporte, besitos hermosa.`,
         photo: null
     },
+    {
+        day: 9,
+        date: '2026-01-17',
+        caption: 'Sushi en La Paz',
+        text: `Hola mi amor, hoy fue viernes, el último de la semana. Fue un día bastante divertido, tuvimos que regresar a Puebla porque se me olvidó la iPad. A verdad no la abrimos el viernes, pero sí estuvo súper chido porque fuimos a un sushi en La Paz súper buenísimo, el top pero carito de París jaja, pero valió mucho la experiencia.
+
+Me encanta verte y estar contigo, gracias por todo.`,
+        photo: null
+    },
+    {
+        day: 10,
+        date: '2026-01-18',
+        caption: 'Fiesta y desveladas',
+        text: `Hola amor, hoy estuvo súper bueno, nos levantamos tarde y de ahí nos fuimos a una fiesta de una prima tuya. No ma, estuvo súper buena aunque al final me puse celosito, es que o sea sí aguanto pero a veces no jaja, es que eres mi princesa y me da miedito pero no me lo tomes a mal, sé que eres la persona más confiable del mundo.
+
+Por cierto, hoy estuvo uffff, ya sabes a qué me refiero jaja. Gracias por estas desveladas de risas, momentos y abrazos.`,
+        photo: null
+    },
     // ========================================
     // AGREGAR MÁS DÍAS AQUÍ
     // ========================================

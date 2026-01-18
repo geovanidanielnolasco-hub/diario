@@ -128,6 +128,24 @@ Cierto, hoy hice mi primera tinga y el día de ayer nos desvelamos jugando un ju
 En fin amor, hasta aquí mi reporte del día de hoy. Besitos mi niña, gracias por permitirme estar a tu lado.`,
         photo: null
     },
+    {
+        day: 7,
+        date: '2026-01-15',
+        caption: 'Desvelándonos con valitas',
+        text: `Mi amor, nos desvelamos jugando otra vez valitas, estuvo súper divertido. Te dormiste a las 2, no podías dormir, te pasas.`,
+        photo: null
+    },
+    {
+        day: 8,
+        date: '2026-01-16',
+        caption: 'Ya tengo tu iPad',
+        text: `Hola mi amor, hoy fue un día interesante. Toño ya me pagó la tablet y yo ya tengo tu iPad, mañana a estas horas ya deberíamos estar viéndola y tú sacando el remojo jaja.
+
+Ay amor, hoy fue un día en el que no hice casi nada, me dediqué full a avanzar con la empresa y los pendientes. Hoy toca esperar que sea madrugada para tratar de firmar la empresa, ojalá funcione. En fin amor, hasta hoy me duró la tinga.
+
+Supongo que hoy también tocará desvelarse para acabar con esas páginas, hoy hiciste 6 en la mañana. Bueno mi amor, hasta aquí mi reporte, besitos hermosa.`,
+        photo: null
+    },
     // ========================================
     // AGREGAR MÁS DÍAS AQUÍ
     // ========================================

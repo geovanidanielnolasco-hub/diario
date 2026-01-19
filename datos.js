@@ -130,24 +130,21 @@ En fin amor, hasta aquí mi reporte del día de hoy. Besitos mi niña, gracias p
     },
     {
         day: 7,
-        date: '2026-01-14',
-        caption: 'Desvelándonos con valitas',
-        text: `Mi amor, nos desvelamos jugando otra vez valitas, estuvo súper divertido. Te dormiste a las 2, no podías dormir, te pasas.`,
-        photo: null
-    },
-    {
-        day: 8,
         date: '2026-01-15',
         caption: 'Ya tengo tu iPad',
         text: `Hola mi amor, hoy fue un día interesante. Toño ya me pagó la tablet y yo ya tengo tu iPad, mañana a estas horas ya deberíamos estar viéndola y tú sacando el remojo jaja.
 
 Ay amor, hoy fue un día en el que no hice casi nada, me dediqué full a avanzar con la empresa y los pendientes. Hoy toca esperar que sea madrugada para tratar de firmar la empresa, ojalá funcione. En fin amor, hasta hoy me duró la tinga.
 
-Supongo que hoy también tocará desvelarse para acabar con esas páginas, hoy hiciste 6 en la mañana. Bueno mi amor, hasta aquí mi reporte, besitos hermosa.`,
+Supongo que hoy también tocará desvelarse para acabar con esas páginas, hoy hiciste 6 en la mañana.
+
+Por cierto mi amor, nos desvelamos jugando otra vez valitas, estuvo súper divertido. Te dormiste a las 2, no podías dormir, te pasas.
+
+Bueno mi amor, hasta aquí mi reporte, besitos hermosa.`,
         photo: null
     },
     {
-        day: 9,
+        day: 8,
         date: '2026-01-16',
         caption: 'Sushi en La Paz',
         text: `Hola mi amor, hoy fue viernes, el último de la semana. Fue un día bastante divertido, tuvimos que regresar a Puebla porque se me olvidó la iPad. A verdad no la abrimos el viernes, pero sí estuvo súper chido porque fuimos a un sushi en La Paz súper buenísimo, el top pero carito de París jaja, pero valió mucho la experiencia.
@@ -156,7 +153,7 @@ Me encanta verte y estar contigo, gracias por todo.`,
         photo: null
     },
     {
-        day: 10,
+        day: 9,
         date: '2026-01-17',
         caption: 'Fiesta y desveladas',
         text: `Hola amor, hoy estuvo súper bueno, nos levantamos tarde y de ahí nos fuimos a una fiesta de una prima tuya. No ma, estuvo súper buena aunque al final me puse celosito, es que o sea sí aguanto pero a veces no jaja, es que eres mi princesa y me da miedito pero no me lo tomes a mal, sé que eres la persona más confiable del mundo.

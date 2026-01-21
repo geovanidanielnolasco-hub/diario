@@ -161,6 +161,42 @@ Me encanta verte y estar contigo, gracias por todo.`,
 Por cierto, hoy estuvo uffff, ya sabes a qué me refiero jaja. Gracias por estas desveladas de risas, momentos y abrazos.`,
         photo: null
     },
+    {
+        day: 10,
+        date: '2026-01-18',
+        caption: 'Un domingo tranquilo',
+        text: `Hola mi amor, hoy fue un domingo bastante tranquilo. Casi no hicimos mucho, la verdad nos la pasamos durmiendo y descansando juntos. No me vine ese día, me quedé contigo hasta el lunes.
+
+A veces los días más sencillos son los más bonitos, simplemente estar a tu lado es suficiente.`,
+        photo: null
+    },
+    {
+        day: 11,
+        date: '2026-01-19',
+        caption: 'Un día difícil',
+        text: `Mi amor, hoy fue un día muy pesado. Lamentablemente, por la mañana falleció el abuelito. Me apresuré a salir del trabajo para venir contigo lo más rápido posible.
+
+Nos quedamos en la casa del abuelo. Gracias por permitirme estar a tu lado en estos momentos difíciles, y gracias por dejarme acompañarte. Te amo.`,
+        photo: null
+    },
+    {
+        day: 12,
+        date: '2026-01-20',
+        caption: 'Día de despedida',
+        text: `Mi amor, hoy estábamos molidos porque no dormimos nada en toda la noche. Fue un día muy triste porque fue el entierro del abuelito.
+
+No hay mucho que decir, solo que estuve contigo y tú estuviste conmigo. En los momentos más difíciles es cuando más importa tenernos el uno al otro.`,
+        photo: null
+    },
+    {
+        day: 13,
+        date: '2026-01-21',
+        caption: 'Contigo en todo momento',
+        text: `Hola mi amor, hoy me quedé contigo. Pedí home office para poder acompañarte y fuimos juntos a Ixtacuixtla para unos últimos trámites del abuelito.
+
+Gracias por dejarme estar a tu lado, aquí andamos juntos en las buenas y en las no tan buenas. Te amo.`,
+        photo: null
+    },
     // ========================================
     // AGREGAR MÁS DÍAS AQUÍ
     // ========================================
